@@ -1,0 +1,52 @@
+{
+    "name": "csgo-free-trade-nuxt",
+    "version": "0.0.0",
+    "private": true,
+    "license": "MIT",
+    "scripts": {
+        "build": "nuxt build",
+        "dev": "nuxt dev",
+        "dev-next": "nuxt dev --experimental-vite",
+        "generate": "nuxt generate",
+        "preview": "nuxt preview",
+        "postinstall": "nuxt prepare",
+        "lint": "eslint \"components/**/*.{ts,vue}\"",
+        "test": "vitest run"
+    },
+    "devDependencies": {
+        "@graphql-codegen/cli": "1.21.8",
+        "@graphql-codegen/fragment-matcher": "3.1.0",
+        "@graphql-codegen/introspection": "2.1.0",
+        "@graphql-codegen/typescript": "2.2.2",
+        "@graphql-codegen/typescript-document-nodes": "2.1.4",
+        "@graphql-codegen/typescript-operations": "2.1.6",
+        "@graphql-codegen/typescript-vue-apollo": "3.1.4",
+        "@nuxtjs/apollo": "^5.0.0-alpha.4",
+        "@nuxtjs/tailwindcss": "^6.6.6",
+        "@pinia-plugin-persistedstate/nuxt": "^1.1.2",
+        "@pinia/nuxt": "^0.4.11",
+        "@types/lodash-es": "^4.17.5",
+        "@vue/composition-api": "^1.7.2",
+        "eslint": "^8.48.0",
+        "eslint-config-zardoy": "^0.2.17",
+        "lodash-es": "^4.17.21",
+        "nuxt": "^3.7.0",
+        "pinia": "^2.1.6",
+        "pinia-plugin-persistedstate": "^3.2.0",
+        "tailwindcss": "^3.3.1"
+    },
+    "dependencies": {
+        "@mdi/font": "^7.3.67",
+        "@nuxt/image": "^0.7.1",
+        "@nuxt/test-utils": "^3.7.1",
+        "@sanny-io/steamlogin": "^2.0.0",
+        "nuxt-graphql-client": "^0.2.30",
+        "sass": "^1.66.1",
+        "superb": "^4.0.0",
+        "vite-plugin-vuetify": "^1.0.2",
+        "vitest": "^0.34.4",
+        "vue-material-design-icons": "^5.2.0",
+        "vue3-popper": "^1.5.0",
+        "vuetify": "^3.3.22"
+    }
+}

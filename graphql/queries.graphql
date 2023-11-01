@@ -1,0 +1,85 @@
+query AuthUser {
+    checkAuth {
+        avatarUrl
+        displayName
+    }
+}
+
+query MyInventory {
+    myInventory(language: "english") {
+        itemDescriptions {
+            itemID
+            iconUrl
+            localizedTitle
+            type
+        }
+        playerItems {
+            id
+            notTradable
+            itemID
+            amount
+        }
+    }
+}
+
+query Offers($first: Int!, $offset: Int!) {
+    offers(first: $first, offset: $offset) {
+        edges {
+            id
+            offeringItems {
+                id
+                name
+                image
+            }
+            wantedItems {
+                id
+                name
+                image
+            }
+        }
+    }
+}
+
+query SearchOffers(
+    $wantedItem: String!
+    $offeringItem: String!
+    $first: Int!
+    $offset: Int!
+) {
+    offers(
+        first: $first
+        offset: $offset
+        wantedItem: $wantedItem
+        offeringItem: $offeringItem
+    ) {
+        edges {
+            id
+            offeringItems {
+                id
+                name
+                image
+            }
+            wantedItems {
+                id
+                name
+                image
+            }
+        }
+    }
+}
+
+query Offer($id: Int!) {
+    offer(id: $id) {
+        steamId
+        offeringItems {
+            id
+            name
+            image
+        }
+        wantedItems {
+            id
+            name
+            image
+        }
+    }
+}

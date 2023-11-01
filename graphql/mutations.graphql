@@ -1,0 +1,22 @@
+# TODO re-generate file save
+
+mutation AuthSteam($search: String!) {
+    authSteam(openIdParams: $search) {
+        token
+        steamID
+        avatarUrl
+        displayName
+    }
+}
+
+mutation Logout {
+    logout
+}
+
+mutation PlaceOffer($offeringItems: [String!]!, $wantedItems: [String!]!) {
+    placeOffer(offeringItems: $offeringItems, wantedItems: $wantedItems)
+}
+
+mutation RemoveOffer($offerId: Int!) {
+    removeOffer(id: $offerId, removeCompletely: false)
+}
